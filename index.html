@@ -174,7 +174,54 @@
 	  56- git merge readme
 
 	  Можем проверить и убедится что у нас нет никаких новых изменений
+	  (nothing to commit, working tree clean)
 	  57- git status
+
+	  Можем удалить ненужную ветку readme после того как у нас произошло слияние веток
+	  58- git branch -D readme
+      59- git status
+	  Чтобы все изменения сохранились-
+      60- git add .
+	  61- git branch
+	  Остаемся с одной веткой но при этом у нас есть все необходимые изменения
+
+
+	  Создаем новый репозиторий для нашего проекта(new repository) в github
+      После создания репозитория необходимо ввести наши данные в терминале vs code
+	  чтобы git мог связатся с нашим аккаунтом в github
+	  62- git config --global user.name
+
+      кликнув видим это те данные которые у нас будут отображатся в git-
+	  Если я хочу изменить изменить наше имя то пишу-
+	  63- git config --global user.name "Artyr Bagirov"
+	  64- git config --global user.name
+
+	  Есть конечно же такая же команда только для email-
+	  65- git config --global user.email
+	  если хотим его поменять тут такой же принцип как при изменении имени-
+	  66- git config --global user.email "markos@ahra.li"
+	  проверим-
+	  67- git config --global user.email
+
+	  Нам нужно вписать те данные которые мы прописываем для github после этого
+	  сможем продолжить- https://github.com/Artyr9292/git-vladilen_minin
+
+	  Теперь в нашей коммандной строке вставляем код со страницы создания репозитория
+	  68- git remote add origin https://github.com/Artyr9292/git-vladilen_minin.git
+
+	  Теперь для того чтобы залить локально то что у нас есть в github на удаленный сервер
+	  прописываем-
+	  69- git push -u origin main(master)
+	  так как мы нашу ветку не переименовали в main(командой git branch -M main)
+      
+	  Обновим нашу страницу в github и увидим страницу после этого с уже готовой страницей репозитория
+      Введем после этого какие то изменения в vs code например в script.js
+	  Для того чтобы наши изменения зафиксировать когда мы туда чтото вписали пишем-
+	  70- git status
+	  71- git add .
+	  72- git status
+	  73- git commit -m "added console.log"
+	  74- git status
 
 	-->
 
